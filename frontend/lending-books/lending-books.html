@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/form/form.css" />
+    <link rel="stylesheet" href="./styles/lending-books.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Låna ut böcker</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>
+          <i
+            id="hamburger"
+            class="hamburger fa-solid fa-bars"
+            aria-label="click to open navigation menu"
+          ></i>
+        </div>
+        <a href="../index.html">
+          <h1 class="h1">BOOKDUCKS</h1>
+        </a>
+        <div class="login-profile-wrapper">
+          <p id="logged-in-user" class="logged-in-user"></p>
+          <a class="login-profile-links" href="../login/login.html"
+            >Logga in/Registrera</a
+          >
+        </div>
+      </header>
+      <nav id="nav" class="nav">
+        <h2 class="h2">Böcker att låna</h2>
+        <a href="../index.html">- Visa alla böcker</a>
+        <a href="../index.html?genre=romantik">- Romantik</a>
+        <a href="../index.html?genre=humor">- Humor</a>
+        <a href="../index.html?genre=skräck">- Skräck</a>
+        <a href="../index.html?genre=barnvänlig">- Barnvänlig</a>
+        <a href="../index.html?genre=fantasy">- Fantasy</a>
+        <a href="../index.html?genre=sci-fi">- Sci-fi</a>
+        <a href="../index.html?genre=action">- Action</a>
+        <h2 class="h2">Övrigt</h2>
+        <a class="lending-books-link" href="../lending-books/lending-books.html"
+          >Låna ut böcker</a
+        >
+        <a class="login-profile-links" href="../login/login.html"
+          >Logga in/Registrera</a
+        >
+        <button class="log-out-btn hide" id="log-out-btn">Logga ut</button>
+      </nav>
+      <main class="main">
+        <section id="not-logged-in-section" class="not-logged-in-section">
+          <h2>För att låna ut en bok måste du först logga in</h2>
+          <a class="blue-btn" href="../login/login.html">Logga in</a>
+        </section>
+        <section id="lending-book-section" class="form-section hide">
+          <h2 id="lending-book-heading">Vill du låna ut:</h2>
+          <div class="type-links-wrapper">
+            <a
+              id="books-link"
+              class="green-btn"
+              href="./lending-books.html?type=books"
+              >En bok?</a
+            >
+            <a
+              id="audio-books-link"
+              class="green-btn"
+              href="./lending-books.html?type=audio-books"
+              >En ljudbok?</a
+            >
+          </div>
+          <form id="lend-book-form" class="form lend-book-form hide">
+            <h2 id="form-heading"></h2>
+            <label class="form-label" for="title-input">Titel:</label>
+            <input class="form-input" id="title-input" type="text" required />
+            <label class="form-label" for="author-input">Författare:</label>
+            <input class="form-input" id="author-input" type="text" required />
+            <label class="form-label" for="date-input">Utgivningsdatum:</label>
+            <input
+              class="form-input date-input"
+              id="date-input"
+              type="date"
+              required
+            />
+            <div class="number-inputs">
+              <div id="length-box"></div>
+
+              <div class="number-input-wrapper">
+                <label class="form-label" for="rating-input">Betyg:</label>
+                <div class="small-box">
+                  <input
+                    id="rating-input"
+                    class="form-input number-input"
+                    type="number"
+                    min="1"
+                    max="5"
+                    required
+                  />
+                  <p>/5</p>
+                </div>
+              </div>
+            </div>
+            <h3>Bild:</h3>
+            <label
+              class="form-label image-input-label"
+              for="image-input"
+              tabindex="0"
+              aria-label="click to upload book cover image"
+              >Klicka här för att ladda upp omslagsbild</label
+            >
+            <input
+              id="image-input"
+              class="image-input"
+              type="file"
+              accept="image/*"
+            />
+            <div id="chosen-image-box" class="chosen-image-box chosen-image">
+              <p id="chosen-image-text" class="chosen-image-text chosen-image">
+                Ingen omslagsbild vald.
+              </p>
+            </div>
+            <fieldset class="genres-field">
+              <legend>Genrer:</legend>
+              <div class="checkboxes">
+                <label class="genre-label" for="romance-box">
+                  <input
+                    class="genre-input"
+                    id="romance-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="1"
+                  />
+                  Romantik</label
+                >
+                <label class="genre-label" for="comedy-box">
+                  <input
+                    class="genre-input"
+                    id="comedy-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="2"
+                  />
+                  Humor</label
+                >
+                <label class="genre-label" for="horror-box">
+                  <input
+                    class="genre-input"
+                    id="horror-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="3"
+                  />
+                  Skräck</label
+                >
+                <label class="genre-label" for="kids-box">
+                  <input
+                    class="genre-input"
+                    id="kids-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="4"
+                  />
+                  Barnvänlig</label
+                >
+                <label class="genre-label" for="fantasy-box">
+                  <input
+                    class="genre-input"
+                    id="fantasy-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="5"
+                  />
+                  Fantasy</label
+                >
+                <label class="genre-label" for="sci-fi-box">
+                  <input
+                    class="genre-input"
+                    id="sci-fi-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="6"
+                  />
+                  Sci-fi</label
+                >
+                <label class="genre-label" for="action-box">
+                  <input
+                    class="genre-input"
+                    id="action-box"
+                    type="checkbox"
+                    name="genre-input"
+                    value="7"
+                  />
+                  Action</label
+                >
+              </div>
+            </fieldset>
+            <!-- <p class="error-msg" id="lending-book-error-msg">Error:</p> -->
+            <button class="blue-btn lend-book-btn" id="lend-book-btn">
+              Låna ut bok
+            </button>
+          </form>
+          <div class="btn-box lending-books-profile-btn">
+            <p id="go-to-profile-label" class="go-to-profile-label">
+              Gå till din profilsida för att se dina böcker
+            </p>
+
+            <a
+              href="../profile/profile.html"
+              class="green-btn go-to-profile-btn"
+              id="go-to-profile-btn"
+            >
+              Gå till profil
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <a href="#">Prenumerera på vårt nyhetsbrev</a>
+        <a href="#">Kontakta oss</a>
+        <a href="#">Våra samarbetspartners</a>
+      </footer>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="./js/draw-length-box-inner-html.js"></script>
+    <script src="./js/lending-books.js"></script>
+  </body>
+</html>

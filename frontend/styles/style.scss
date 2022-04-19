@@ -1,0 +1,126 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&display=swap');
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    // @include flex(center, center, column);
+    background: $light-color;
+    // height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+    .header {
+        @include flex(space-between, center, row);
+        background: $light-color;
+        width:100%;
+        height: 20vh;
+        box-shadow: $green 0px 1px 3px,$green 0px 1px 2px;
+        .hamburger{
+            cursor: pointer;
+            color:$green;
+            margin: 0 20px;
+            font-size: 35px;
+            width: 35px;
+            &:hover {
+                color:$blue;
+            }
+            &.open {
+                color:$blue;
+                font-size:40px;
+                &:hover{
+                    color:$green;
+                }
+            }
+            }
+        .h1 {
+            font-size:45px;
+            font-family: $font-1;
+            color:$green;
+        }
+        .login-profile-wrapper{
+            margin: 10px 10px;
+            align-self: flex-start;
+            justify-self: flex-end;
+            font-family: $font-1;
+            font-weight: bolder;
+            .logged-in-user{
+                color: $blue;
+            }
+            a {
+                color: $green;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .nav {
+        display:none;
+        &.open{
+            @include flex(initial, center, column);
+            align-self: flex-start;
+            justify-self: center;
+            z-index:1;
+            gap: 5px;
+            width:60%;
+            height: 70%;
+            max-height: 80vh;
+            position:absolute;
+            background: $blue;
+            @media(min-width: $breakpoint){
+                max-width:300px;
+            }
+            
+        }
+        h2 {
+            margin-top: 10px;
+            font-family: $font-2;
+            font-size: 23px;
+            color:$light-color;
+        }
+        a {
+            font-family: $font-2;
+            color: $light-color;
+            @include flex(center, center, row);
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        .log-out-btn {
+            @include green-btn;
+            margin-bottom: 15px;
+            &.hide{
+                display:none;
+            }
+        }
+    }
+    .main{
+        min-height: 70vh;
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+        height: 10vh;
+        background: $green;
+        border-top:2px solid $shadow-green;
+            @include flex(space-evenly, center, row);
+            a {
+                font-family: $font-1;
+                color: $light-color;
+                &:hover {
+                    font-weight: bolder;
+                }
+            }
+    }
+}

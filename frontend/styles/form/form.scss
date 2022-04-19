@@ -1,0 +1,97 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.main{
+    .form-section{
+    @include flex(center, center, column);
+    margin-top:30px;
+    gap:20px;
+    h2{
+        font-family: $font-1;
+        color:$green;
+        font-size: 30px;
+    }
+    .form{
+        @include flex(center, center, column);
+        .form-label{
+            @include form-label;
+        }
+        .form-input{
+            @include form-input;
+        }
+        .number-input{
+            @include number-input;
+        }
+        .error-msg{
+            color:rgba(222, 25, 25, 0.849);
+            font-family: $font-1;
+            font-size: 20px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+        h3{
+            @include form-label;
+        }
+        .image-input{
+            display:none;
+        }
+        .image-input-label{
+            @include green-btn;
+            height: fit-content;
+            text-align: center;
+            padding:5px;
+        }
+        .chosen-image-box{
+            @include form-input;
+            @include flex(flex-start, center, row);
+            margin-top: 10px;
+            height: fit-content;
+            min-height: 40px;
+            .chosen-image-text{
+                word-wrap: break-word;
+                font-family: $font-1;
+                color:$green;
+                font-weight: bolder;            
+                &.img-missing{
+                    color:$error-red;
+                }
+            }
+            &.img-missing{
+                box-shadow: inset $error-red 0px 1px 3px 0px,$error-red 0px 0px 0px 1px;
+                border:1px solid $error-red;
+                color:$error-red;
+
+            }
+        }
+    }
+    .btn-box{
+        @include flex(center, center, column);
+        gap:5px;
+        &.lending-books-profile-btn{
+            margin-top:50px;
+        }
+    }
+    .label{
+        font-family: $font-1;
+        color:$green;
+        font-weight: bolder;        
+    }
+
+    &.hide{
+        display:none;
+    }
+}
+.blue-btn{
+    @include blue-btn;
+    &.lend-book-btn{
+        margin-bottom:50px;
+    }
+}
+.green-btn {
+    @include green-btn;
+    &.go-to-btns, &.go-to-profile-btn{
+        margin-bottom: 50px;    
+    }
+}
+}

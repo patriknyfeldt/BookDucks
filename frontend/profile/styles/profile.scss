@@ -1,0 +1,124 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.main{
+    @include flex(center, center, column);
+    gap:20px;
+     h2{
+         margin-top:20px;
+        font-family: $font-1;
+        color:$green;
+        font-size: 30px;
+     }
+     h3{
+        font-family: $font-1;
+        color:$green;
+        font-size: 25px;
+    }
+
+     .user-section{
+         @include flex(center, center, column);
+         gap:20px;
+         .user-wrapper{
+             @include flex(center, flex-start, column);
+             gap:10px;
+             p{
+                 font-family: $font-2;
+                 font-weight: bolder;
+                 color: $shadow-blue;
+             }
+            }
+            .log-out-btn{
+               @include green-btn;
+               margin-bottom: 5px;    
+            }
+     }
+     .books-section{
+        @include flex(center, center, column);
+        width: 100%;
+        gap:20px;    
+        .books-wrapper{
+            @include flex(space-around, initial, row);
+            flex-wrap:wrap;
+            width:100%;
+            gap:50px;
+            margin-bottom: 50px;
+            .book-article{
+                @include flex(center, center, column);
+                width: 500px;
+                gap:20px;
+                h4{
+                    font-family: $font-1;
+                    color:$shadow-blue;
+                    font-size: 20px;
+
+                }
+                .content{
+                    @include flex(center, center, column);
+                    width: 100%;
+                    .left-wrapper{
+                        width: 50%;
+                            .book-img{
+                                height: 300px;
+                                width: 200px;
+                            }
+                    }
+                    .right-wrapper{
+                        @include flex(center, flex-start, column);
+                        height: 100%;
+                        width: 50%;
+                        gap:10px;
+                       
+                        p{
+                            font-family: $font-2;
+                            font-weight: bolder;
+                            color: $shadow-blue;
+                        }
+                        .genre-box{
+                            @include flex(initial, initial, row);
+                            gap:4px;
+                            font-family: $font-2;
+                            color:$shadow-blue;
+                            font-weight: bolder;
+                            a{
+                                color: $green;
+                                &:hover{
+                                    color:$shadow-blue;
+                                }
+                            }
+                        }
+                        .delete-box{
+                            @include flex(center, center, row);
+                            width: 100%;
+                            .delete-btn{
+                                margin-top:10px;
+                                background-color: $light-color;
+                                width:80px;
+                                height: 20px;
+                                border:1px solid $shadow-blue;
+                                border-radius: 5px;
+                                box-shadow: $shadow-blue 0px 1px 3px 0px,$shadow-blue 0px 0px 0px 1px;
+                                font-family: $font-2;
+                                font-weight: bolder;
+                                color:$shadow-blue;
+                                cursor:pointer;
+                                &:hover{
+                                    box-shadow: inset $shadow-blue 1px 2px 2px 0px,$shadow-blue 0px 0px 0px 1px;
+                                }
+                            
+                            }
+                        }
+                    }
+                    @media(min-width: 550px){
+                        @include flex(space-between, center, row);
+                        .right-wrapper {
+                            border-top:1px solid $shadow-green;
+                            border-bottom: 1px solid $shadow-green;
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+}

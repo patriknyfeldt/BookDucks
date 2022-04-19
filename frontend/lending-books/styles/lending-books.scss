@@ -1,0 +1,152 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+*{
+    box-sizing: border-box;
+}
+.not-logged-in-section{
+    @include flex(center, center, column);
+    h2{
+        margin-top:50px;
+        text-align:center;
+        max-width: 80%;
+        font-family: $font-1;
+        color:$green;
+        font-size: 30px;
+    }
+    a{
+      @include flex(center, center, row);
+      margin-top:50px;
+    }
+    &.hide{
+        display:none;
+    }
+}
+.form-section{
+    a{
+        @include flex(center, center, row);
+    }
+    .type-links-wrapper{
+        @include flex(space-around, center, row);
+        flex-wrap:wrap;
+        gap:20px;
+        width: 100%;
+        max-width: 500px;
+        a{
+            @include flex(center, center, row);      
+        }
+    }
+    .lend-book-form{
+
+        .date-input input {
+            position: relative;
+        }
+        .date-input::-webkit-calendar-picker-indicator {
+            background: transparent;
+            cursor: pointer;
+            height: 40px;
+            position: absolute;
+            width: 300px;
+        }
+        .number-inputs{
+            width: 300px;
+            @include flex(space-around, flex-start, row);
+            .number-input-wrapper{
+                @include flex(center, flex-start, column);
+                gap:5px;
+                .small-box{
+                    @include flex(center, center, row);
+                    gap:5px;
+                    p{
+                        margin-bottom:8px;
+                        color:$green;
+                        font-weight: bolder;
+                        font-family: $font-1;
+                        font-size: 20px;        
+                    }
+                    .number-input{
+                        width:40px;
+                    }
+                }
+                &.hide{
+                    display:none;
+                }
+            }    
+            .audio-book-field{
+                @include flex(center, center, row);
+                gap: 5px;
+                border:none;
+                legend{
+                    @include form-label;
+                }
+                #minutes-input, #hours-input{
+                    width:50px;
+                }
+                &.hide{
+                    display:none;
+                }    
+            }
+        }
+        .genres-field{
+            border:none;
+            legend{
+                @include form-label;
+                text-align: center;
+                margin-bottom:-5px;
+            }
+        .checkboxes{
+            @include flex(center, center, row);
+            width:100%;
+            max-width: 500px;
+            flex-wrap: wrap;
+                .genre-label{
+                @include flex(center, center, row);
+                color:$green;
+                font-weight: bolder;
+                font-family: $font-1;
+                margin: 1em 1em;
+                }
+                .genre-input{
+                    appearance: none;
+                    background-color:$light-color;
+                    margin:0;
+                    font:inherit;
+                    color:$green;
+                    width: 1em;
+                    height: 1em;
+                    border: 0.15em solid $green;
+                    border-radius: 50%;
+                    margin-right: 0.3em;
+                    @include flex(center, center, row);
+                    &::before{
+                        content:"";
+                        width: 0.5em;
+                        height: 0.5em;
+                        border-radius: 50%;
+                        transform: scale(0);
+                        transition: 120ms transform ease-in-out;
+                        box-shadow: inset 1em 1em 1em $green;
+                    }
+                    &:checked::before{
+                        transform: scale(1);
+
+                    }
+                }
+            }
+
+        }
+    &.hide{
+        display:none;
+    }
+    }
+&.hide{
+    display:none;
+}
+.go-to-profile-label{
+    font-family: $font-1;
+        color:$green;
+        font-weight: bolder;
+        &.blue-label{
+            color:$blue;
+        }  
+}
+}    

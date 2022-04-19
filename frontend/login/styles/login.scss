@@ -1,0 +1,51 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.main{
+    .form-section{
+    @include flex(center, center, column);
+    margin-top:30px;
+    gap:20px;
+    h2{
+        font-family: $font-1;
+        color:$green;
+        font-size: 30px;
+    }
+    .form{
+        @include flex(center, center, column);
+        .form-label{
+            @include form-label;
+        }
+        .form-input{
+            @include form-input;
+        }
+        .error-msg{
+            color: $error-red;
+            font-family: $font-1;
+            font-size: 20px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+        .blue-btn{
+            @include blue-btn;
+        }
+    }
+    .btn-box{
+        @include flex(center, center, column);
+        gap:5px;
+    }
+    .label{
+        font-family: $font-1;
+        color:$green;
+        font-weight: bolder;
+    }
+    .green-btn {
+        @include green-btn;
+        margin-bottom: 50px;
+    }
+    &.hide{
+        display:none;
+    }
+}
+}

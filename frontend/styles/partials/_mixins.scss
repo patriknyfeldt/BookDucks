@@ -1,0 +1,84 @@
+@mixin flex($justify, $align, $direction){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin form-label{
+    font-family: $font-2;
+    font-size: 20px;
+    color:$green;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+@mixin form-input{
+    box-shadow: inset $green 0px 1px 3px 0px,$green 0px 0px 0px 1px;
+    background-color: $light-color;
+    width:300px;
+    height: 40px;
+    border:1px solid $green;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color:$green;
+    font-family: $font-2;
+    font-weight: bolder;
+    font-size: 20px;
+    &:focus{
+        color:$blue;
+        border:1px solid $blue;
+        box-shadow: inset $blue 0px 1px 3px 0px,$blue 0px 0px 0px 1px;
+        outline:none;
+    }
+}
+@mixin number-input{
+        box-shadow: inset $green 0px 1px 3px 0px,$green 0px 0px 0px 1px;
+        background-color: $light-color;
+        width:80px;
+        height: 40px;
+        border:1px solid $green;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        color:$green;
+        font-family: $font-2;
+        font-weight: bolder;
+        font-size: 20px;
+        &:focus{
+            color:$blue;
+            border:1px solid $blue;
+            box-shadow: inset $blue 0px 1px 3px 0px,$blue 0px 0px 0px 1px;
+            outline:none;
+        }
+    }
+@mixin blue-btn{
+    background-color: $blue;
+    width:200px;
+    height: 40px;
+    border:1px solid $shadow-blue;
+    border-radius: 10px;
+    box-shadow: $shadow-blue 0px 1px 3px 0px,$shadow-blue 0px 0px 0px 1px;
+    font-family: $font-2;
+    font-size: 20px;
+    font-weight: bolder;
+    color:$light-color;
+    cursor:pointer;
+    &:hover{
+        box-shadow: inset $shadow-blue 1px 2px 2px 0px,$shadow-blue 0px 0px 0px 1px;
+    }
+}
+
+@mixin green-btn{
+    background-color: $green;
+    width:200px;
+    height: 40px;
+    border:1px solid $shadow-green;
+    border-radius: 10px;
+    box-shadow: $shadow-green 0px 1px 3px 0px,$shadow-green 0px 0px 0px 1px;
+    font-family: $font-2;
+    font-size: 20px;
+    font-weight: bolder;
+    color:$light-color;
+    cursor:pointer;
+    &:hover{
+        box-shadow: inset $shadow-green 1px 2px 2px 0px,$shadow-green 0px 0px 0px 1px;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Profilsida</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>
+          <i
+            id="hamburger"
+            class="hamburger fa-solid fa-bars"
+            aria-label="click to open navigation menu"
+          ></i>
+        </div>
+        <a href="../index.html">
+          <h1 class="h1">BOOKDUCKS</h1>
+        </a>
+        <div class="login-profile-wrapper">
+          <p id="logged-in-user" class="logged-in-user"></p>
+          <a class="login-profile-links" href="../login/login.html"
+            >Logga in/Registrera</a
+          >
+        </div>
+      </header>
+      <nav id="nav" class="nav">
+        <h2 class="h2">Böcker att låna</h2>
+        <a href="../index.html">- Visa alla böcker</a>
+        <a href="../index.html?genre=romantik">- Romantik</a>
+        <a href="../index.html?genre=humor">- Humor</a>
+        <a href="../index.html?genre=skräck">- Skräck</a>
+        <a href="../index.html?genre=barnvänlig">- Barnvänlig</a>
+        <a href="../index.html?genre=fantasy">- Fantasy</a>
+        <a href="../index.html?genre=sci-fi">- Sci-fi</a>
+        <a href="../index.html?genre=action">- Action</a>
+        <h2 class="h2">Övrigt</h2>
+        <a class="lending-books-link" href="../lending-books/lending-books.html"
+          >Låna ut böcker</a
+        >
+        <a class="login-profile-links" href="../login/login.html"
+          >Logga in/Registrera</a
+        >
+        <button class="log-out-btn hide" id="log-out-btn">Logga ut</button>
+      </nav>
+
+      <main class="main">
+        <h2>Profil</h2>
+        <h3>Dina uppgifter</h3>
+        <section id="user-section" class="user-section"></section>
+        <h2>Dina böcker</h2>
+        <section class="books-section">
+          <h3>böcker</h3>
+          <div id="books-wrapper" class="books-wrapper"></div>
+          <h3>ljudböcker</h3>
+          <div id="audio-books-wrapper" class="books-wrapper"></div>
+        </section>
+      </main>
+      <footer class="footer">
+        <a href="#">Prenumerera på vårt nyhetsbrev</a>
+        <a href="#">Kontakta oss</a>
+        <a href="#">Våra samarbetspartners</a>
+      </footer>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/draw-books.js"></script>
+    <script src="./profil.js"></script>
+  </body>
+</html>

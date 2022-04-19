@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background: #F7F9FB;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #F7F9FB;
+  width: 100%;
+  height: 20vh;
+  -webkit-box-shadow: #687864 0px 1px 3px, #687864 0px 1px 2px;
+          box-shadow: #687864 0px 1px 3px, #687864 0px 1px 2px;
+}
+
+.container .header .hamburger {
+  cursor: pointer;
+  color: #687864;
+  margin: 0 20px;
+  font-size: 35px;
+  width: 35px;
+}
+
+.container .header .hamburger:hover {
+  color: #31708E;
+}
+
+.container .header .hamburger.open {
+  color: #31708E;
+  font-size: 40px;
+}
+
+.container .header .hamburger.open:hover {
+  color: #687864;
+}
+
+.container .header .h1 {
+  font-size: 45px;
+  font-family: "Dosis", sans-serif;
+  color: #687864;
+}
+
+.container .header .login-profile-wrapper {
+  margin: 10px 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: flex-end;
+  font-family: "Dosis", sans-serif;
+  font-weight: bolder;
+}
+
+.container .header .login-profile-wrapper .logged-in-user {
+  color: #31708E;
+}
+
+.container .header .login-profile-wrapper a {
+  color: #687864;
+}
+
+.container .header .login-profile-wrapper a:hover {
+  color: #31708E;
+}
+
+.container .nav {
+  display: none;
+}
+
+.container .nav.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: center;
+  z-index: 1;
+  gap: 5px;
+  width: 60%;
+  height: 70%;
+  max-height: 80vh;
+  position: absolute;
+  background: #31708E;
+}
+
+@media (min-width: 600px) {
+  .container .nav.open {
+    max-width: 300px;
+  }
+}
+
+.container .nav h2 {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  color: #F7F9FB;
+}
+
+.container .nav a {
+  font-family: "Montserrat", sans-serif;
+  color: #F7F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+}
+
+.container .nav a:hover {
+  font-weight: bold;
+}
+
+.container .nav .log-out-btn {
+  background-color: #687864;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #556351;
+  border-radius: 10px;
+  -webkit-box-shadow: #556351 0px 1px 3px 0px, #556351 0px 0px 0px 1px;
+          box-shadow: #556351 0px 1px 3px 0px, #556351 0px 0px 0px 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #F7F9FB;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.container .nav .log-out-btn:hover {
+  -webkit-box-shadow: inset #556351 1px 2px 2px 0px, #556351 0px 0px 0px 1px;
+          box-shadow: inset #556351 1px 2px 2px 0px, #556351 0px 0px 0px 1px;
+}
+
+.container .nav .log-out-btn.hide {
+  display: none;
+}
+
+.container .main {
+  min-height: 70vh;
+  width: 100%;
+}
+
+.container .footer {
+  width: 100%;
+  height: 10vh;
+  background: #687864;
+  border-top: 2px solid #556351;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .footer a {
+  font-family: "Dosis", sans-serif;
+  color: #F7F9FB;
+}
+
+.container .footer a:hover {
+  font-weight: bolder;
+}
+/*# sourceMappingURL=style.css.map */

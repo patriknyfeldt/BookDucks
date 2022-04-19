@@ -1,0 +1,148 @@
+.main .form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.main .form-section h2 {
+  font-family: "Dosis", sans-serif;
+  color: #687864;
+  font-size: 30px;
+}
+
+.main .form-section .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .form-section .form .form-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #687864;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.main .form-section .form .form-input {
+  -webkit-box-shadow: inset #687864 0px 1px 3px 0px, #687864 0px 0px 0px 1px;
+          box-shadow: inset #687864 0px 1px 3px 0px, #687864 0px 0px 0px 1px;
+  background-color: #F7F9FB;
+  width: 300px;
+  height: 40px;
+  border: 1px solid #687864;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #687864;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.main .form-section .form .form-input:focus {
+  color: #31708E;
+  border: 1px solid #31708E;
+  -webkit-box-shadow: inset #31708E 0px 1px 3px 0px, #31708E 0px 0px 0px 1px;
+          box-shadow: inset #31708E 0px 1px 3px 0px, #31708E 0px 0px 0px 1px;
+  outline: none;
+}
+
+.main .form-section .form .error-msg {
+  color: rgba(222, 25, 25, 0.849);
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.main .form-section .form .blue-btn {
+  background-color: #31708E;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #0c5d89;
+  border-radius: 10px;
+  -webkit-box-shadow: #0c5d89 0px 1px 3px 0px, #0c5d89 0px 0px 0px 1px;
+          box-shadow: #0c5d89 0px 1px 3px 0px, #0c5d89 0px 0px 0px 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #F7F9FB;
+  cursor: pointer;
+}
+
+.main .form-section .form .blue-btn:hover {
+  -webkit-box-shadow: inset #0c5d89 1px 2px 2px 0px, #0c5d89 0px 0px 0px 1px;
+          box-shadow: inset #0c5d89 1px 2px 2px 0px, #0c5d89 0px 0px 0px 1px;
+}
+
+.main .form-section .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.main .form-section .label {
+  font-family: "Dosis", sans-serif;
+  color: #687864;
+  font-weight: bolder;
+}
+
+.main .form-section .green-btn {
+  background-color: #687864;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #556351;
+  border-radius: 10px;
+  -webkit-box-shadow: #556351 0px 1px 3px 0px, #556351 0px 0px 0px 1px;
+          box-shadow: #556351 0px 1px 3px 0px, #556351 0px 0px 0px 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #F7F9FB;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.main .form-section .green-btn:hover {
+  -webkit-box-shadow: inset #556351 1px 2px 2px 0px, #556351 0px 0px 0px 1px;
+          box-shadow: inset #556351 1px 2px 2px 0px, #556351 0px 0px 0px 1px;
+}
+
+.main .form-section.hide {
+  display: none;
+}
+/*# sourceMappingURL=login.css.map */

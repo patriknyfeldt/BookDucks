@@ -1,0 +1,335 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.not-logged-in-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.not-logged-in-section h2 {
+  margin-top: 50px;
+  text-align: center;
+  max-width: 80%;
+  font-family: "Dosis", sans-serif;
+  color: #687864;
+  font-size: 30px;
+}
+
+.not-logged-in-section a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+}
+
+.not-logged-in-section.hide {
+  display: none;
+}
+
+.form-section a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-section .type-links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-section .type-links-wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-section .lend-book-form .date-input input {
+  position: relative;
+}
+
+.form-section .lend-book-form .date-input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  width: 300px;
+}
+
+.form-section .lend-book-form .number-inputs {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-section .lend-book-form .number-inputs .number-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.form-section .lend-book-form .number-inputs .number-input-wrapper .small-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+}
+
+.form-section .lend-book-form .number-inputs .number-input-wrapper .small-box p {
+  margin-bottom: 8px;
+  color: #687864;
+  font-weight: bolder;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+
+.form-section .lend-book-form .number-inputs .number-input-wrapper .small-box .number-input {
+  width: 40px;
+}
+
+.form-section .lend-book-form .number-inputs .number-input-wrapper.hide {
+  display: none;
+}
+
+.form-section .lend-book-form .number-inputs .audio-book-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+  border: none;
+}
+
+.form-section .lend-book-form .number-inputs .audio-book-field legend {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #687864;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.form-section .lend-book-form .number-inputs .audio-book-field #minutes-input, .form-section .lend-book-form .number-inputs .audio-book-field #hours-input {
+  width: 50px;
+}
+
+.form-section .lend-book-form .number-inputs .audio-book-field.hide {
+  display: none;
+}
+
+.form-section .lend-book-form .genres-field {
+  border: none;
+}
+
+.form-section .lend-book-form .genres-field legend {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #687864;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.form-section .lend-book-form .genres-field .checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 500px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-section .lend-book-form .genres-field .checkboxes .genre-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #687864;
+  font-weight: bolder;
+  font-family: "Dosis", sans-serif;
+  margin: 1em 1em;
+}
+
+.form-section .lend-book-form .genres-field .checkboxes .genre-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #F7F9FB;
+  margin: 0;
+  font: inherit;
+  color: #687864;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid #687864;
+  border-radius: 50%;
+  margin-right: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-section .lend-book-form .genres-field .checkboxes .genre-input::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+  -webkit-box-shadow: inset 1em 1em 1em #687864;
+          box-shadow: inset 1em 1em 1em #687864;
+}
+
+.form-section .lend-book-form .genres-field .checkboxes .genre-input:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form-section .lend-book-form.hide {
+  display: none;
+}
+
+.form-section.hide {
+  display: none;
+}
+
+.form-section .go-to-profile-label {
+  font-family: "Dosis", sans-serif;
+  color: #687864;
+  font-weight: bolder;
+}
+
+.form-section .go-to-profile-label.blue-label {
+  color: #31708E;
+}
+/*# sourceMappingURL=lending-books.css.map */
