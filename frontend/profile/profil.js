@@ -13,7 +13,9 @@ $('#user-section').html(`
 const getBooksFromSpecificUser = async (typeOfBook, activeUser) => {
     const {data} = await axios.get(`http://localhost:1337/api/${typeOfBook}?filters[userId][$eq]=${activeUser}&populate=*`);
     const books = data.data;
-    renderBooks(books, typeOfBook, activeUser);
+    books.length > 0? renderBooks(books, typeOfBook, activeUser): 
+    $(`#no-${typeOfBook}-msg`).text('Här var det tomt');
+
 }
 const start = () => {
     const typeOfBooks = ['books', 'audio-books'];

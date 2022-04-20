@@ -40,7 +40,7 @@
       </header>
       <nav id="nav" class="nav">
         <h2 class="h2">Böcker att låna</h2>
-        <a href="../index.html">- Visa alla böcker</a>
+        <a href="../index.html">- Visa alla kategorier</a>
         <a href="../index.html?genre=romantik">- Romantik</a>
         <a href="../index.html?genre=humor">- Humor</a>
         <a href="../index.html?genre=skräck">- Skräck</a>
@@ -62,12 +62,24 @@
         <h2>Profil</h2>
         <h3>Dina uppgifter</h3>
         <section id="user-section" class="user-section"></section>
-        <h2>Dina böcker</h2>
+        <h2>Dina böcker och ljudböcker</h2>
         <section class="books-section">
           <h3>böcker</h3>
           <div id="books-wrapper" class="books-wrapper"></div>
+          <p id="no-books-msg" class="no-books-msg"></p>
+          <a
+            class="lend-book-btn"
+            href="../lending-books/lending-books.html?type=books"
+            >Låna ut en bok</a
+          >
           <h3>ljudböcker</h3>
           <div id="audio-books-wrapper" class="books-wrapper"></div>
+          <p id="no-audio-books-msg" class="no-books-msg"></p>
+          <a
+            class="lend-book-btn"
+            href="../lending-books/lending-books.html?type=audio-books"
+            >Låna ut en ljudbok</a
+          >
         </section>
       </main>
       <footer class="footer">

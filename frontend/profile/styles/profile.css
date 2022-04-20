@@ -107,6 +107,47 @@
   gap: 20px;
 }
 
+.main .books-section .no-books-msg {
+  margin-top: -50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  color: #0c5d89;
+}
+
+.main .books-section .lend-book-btn {
+  background-color: #31708E;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #0c5d89;
+  border-radius: 10px;
+  -webkit-box-shadow: #0c5d89 0px 1px 3px 0px, #0c5d89 0px 0px 0px 1px;
+          box-shadow: #0c5d89 0px 1px 3px 0px, #0c5d89 0px 0px 0px 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #F7F9FB;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.main .books-section .lend-book-btn:hover {
+  -webkit-box-shadow: inset #0c5d89 1px 2px 2px 0px, #0c5d89 0px 0px 0px 1px;
+          box-shadow: inset #0c5d89 1px 2px 2px 0px, #0c5d89 0px 0px 0px 1px;
+}
+
 .main .books-section .books-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

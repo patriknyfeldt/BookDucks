@@ -16,12 +16,12 @@
         @include flex(center, center, column);
         width: 100%;
         gap:20px;
-
-        h3{
-            font-family: $font-1;
-            color:$green;
-            font-size: 25px;
-        }
+            h3{
+                font-family: $font-1;
+                color:$green;
+                font-size: 25px;
+            }
+        
         .books-wrapper{
             @include flex(space-around, initial, row);
             flex-wrap:wrap;

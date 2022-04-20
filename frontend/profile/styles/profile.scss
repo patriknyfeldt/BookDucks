@@ -36,7 +36,18 @@
      .books-section{
         @include flex(center, center, column);
         width: 100%;
-        gap:20px;    
+        gap:20px;
+        .no-books-msg{
+            margin-top: -50px;
+            font-family: $font-2;
+            font-weight: bolder;
+            color: $shadow-blue;
+        }
+        .lend-book-btn{
+            @include blue-btn;
+            @include flex(center, center, row);
+            margin-bottom:50px;
+        }    
         .books-wrapper{
             @include flex(space-around, initial, row);
             flex-wrap:wrap;

@@ -92,6 +92,11 @@
   outline: none;
 }
 
+.main .form-section .form .number-input::-webkit-outer-spin-button, .main .form-section .form .number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .main .form-section .form .error-msg {
   color: rgba(222, 25, 25, 0.849);
   font-family: "Dosis", sans-serif;
